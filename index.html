@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>芝浦学園 〜春の予感〜</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- タイトル画面 -->
+    <div id="title-screen" class="screen active">
+        <div class="title-content">
+            <h1 class="game-title">芝浦学園</h1>
+            <h2 class="game-subtitle">〜春の予感〜</h2>
+            <div class="title-menu">
+                <button class="menu-btn" onclick="startNewGame()">新規ゲーム</button>
+                <button class="menu-btn" onclick="showLoadScreen()">コンティニュー</button>
+                <button class="menu-btn" onclick="showSettings()">設定</button>
+            </div>
+        </div>
+        <div class="title-bg"></div>
+    </div>
+
+    <!-- メインゲーム画面 -->
+    <div id="game-screen" class="screen">
+        <!-- 背景 -->
+        <div id="background" class="background"></div>
+        
+        <!-- キャラクター表示エリア -->
+        <div id="character-container" class="character-container">
+            <img id="character-left" class="character character-left" style="display: none;">
+            <img id="character-center" class="character character-center" style="display: none;">
+            <img id="character-right" class="character character-right" style="display: none;">
+        </div>
+
+        <!-- テキストボックス -->
+        <div id="text-box" class="text-box">
+            <div id="speaker-name" class="speaker-name"></div>
+            <div id="dialogue-text" class="dialogue-text"></div>
+            <div class="continue-indicator">▼</div>
+        </div>
+
+        <!-- 選択肢エリア -->
+        <div id="choice-container" class="choice-container" style="display: none;"></div>
+
+        <!-- UI コントロール -->
+        <div class="game-controls">
+            <button class="control-btn" onclick="showMenu()" title="メニュー">
+                <span>📋</span>
+            </button>
+            <button class="control-btn" onclick="toggleAutoMode()" id="auto-btn" title="オート">
+                <span>▶</span>
+            </button>
+            <button class="control-btn" onclick="toggleSkip()" id="skip-btn" title="スキップ">
+                <span>⏩</span>
+            </button>
+            <button class="control-btn" onclick="showBacklog()" title="バックログ">
+                <span>📜</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- セーブ/ロード画面 -->
+    <div id="save-load-screen" class="screen modal">
+        <div class="modal-content">
+            <h2 id="save-load-title">セーブ/ロード</h2>
+            <div class="save-slots" id="save-slots"></div>
+            <button class="close-btn" onclick="closeSaveLoad()">閉じる</button>
+        </div>
+    </div>
+
+    <!-- バックログ画面 -->
+    <div id="backlog-screen" class="screen modal">
+        <div class="modal-content">
+            <h2>バックログ</h2>
+            <div class="backlog-content" id="backlog-content"></div>
+            <button class="close-btn" onclick="closeBacklog()">閉じる</button>
+        </div>
+    </div>
+
+    <!-- メニュー画面 -->
+    <div id="menu-screen" class="screen modal">
+        <div class="modal-content">
+            <h2>メニュー</h2>
+            <div class="menu-buttons">
+                <button class="menu-btn" onclick="resumeGame()">ゲームに戻る</button>
+                <button class="menu-btn" onclick="showSaveScreen()">セーブ</button>
+                <button class="menu-btn" onclick="showLoadScreen()">ロード</button>
+                <button class="menu-btn" onclick="showSettings()">設定</button>
+                <button class="menu-btn" onclick="returnToTitle()">タイトルに戻る</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 設定画面 -->
+    <div id="settings-screen" class="screen modal">
+        <div class="modal-content">
+            <h2>設定</h2>
+            <div class="settings-panel">
+                <div class="setting-item">
+                    <label>テキスト速度</label>
+                    <input type="range" id="text-speed" min="1" max="100" value="50">
+                </div>
+                <div class="setting-item">
+                    <label>オート速度</label>
+                    <input type="range" id="auto-speed" min="1000" max="5000" value="2000">
+                </div>
+            </div>
+            <button class="close-btn" onclick="closeSettings()">閉じる</button>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

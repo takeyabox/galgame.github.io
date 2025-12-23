@@ -1,0 +1,341 @@
+:root {
+    --primary-color: #ffb7c5;
+    /* Sakura pink */
+    --secondary-color: #a78bfa;
+    --text-color: #333;
+    --bg-color: #fdf2f8;
+    --ui-bg-color: rgba(255, 255, 255, 0.9);
+    --ui-border-color: #ffb7c5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--bg-color);
+    overflow: hidden;
+    user-select: none;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* Title Screen */
+#title-screen {
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.title-content {
+    z-index: 2;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.game-title {
+    font-size: 4rem;
+    color: #e11d48;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-subtitle {
+    font-size: 1.5rem;
+    color: #4b5563;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.title-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.menu-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    color: #e11d48;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+}
+
+.menu-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-color: #ffb7c5;
+}
+
+/* Game Screen */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.character-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.character {
+    position: absolute;
+    bottom: 210px;
+    max-height: 85%;
+    max-width: 40%;
+    transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: brightness(0.9);
+}
+
+.character.speaking {
+    filter: brightness(1.1);
+    z-index: 10;
+}
+
+.character-left {
+    left: 10%;
+}
+
+.character-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.character-right {
+    right: 10%;
+}
+
+.text-box {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid var(--ui-border-color);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.speaker-name {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.dialogue-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.continue-indicator {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    animation: bounce 1s infinite;
+    color: var(--primary-color);
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+/* Choices */
+.choice-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 20;
+}
+
+.choice-btn {
+    padding: 1.5rem 3rem;
+    font-size: 1.3rem;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    min-width: 400px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.choice-btn:hover {
+    transform: scale(1.05);
+    background-color: var(--bg-color);
+}
+
+/* Controls */
+.game-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.control-btn {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+.control-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Modals */
+.modal {
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #6b7280;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+.save-slots {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.save-slot {
+    border: 2px solid #e5e7eb;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #f9fafb;
+}
+
+.save-slot:hover {
+    border-color: var(--primary-color);
+    background: white;
+}
+
+.save-slot.empty {
+    color: #9ca3af;
+    font-style: italic;
+}
+
+.setting-item {
+    margin-bottom: 20px;
+}
+
+.setting-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.setting-item input[type="range"] {
+    width: 100%;
+}
+
+.backlog-entry {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+.backlog-speaker {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.backlog-text {
+    margin-top: 5px;
+}
