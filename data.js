@@ -113,7 +113,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "春の陽気ってやつは、どうしてこうも人間の意識を奪っていくんだろうか。昨晩、ついゲームをやりすぎたせいでもあるが。"
+            text: "昨晩、ついゲームをやりすぎたせいだろう。"
         },
         {
             type: "dialogue",
@@ -137,9 +137,13 @@ const SCENARIO = {
             expression: "smiling"
         },
         {
+            type: "narration",
+            text: "こいつは高橋珠梨。俺の幼馴染であり、クラスでも一目置かれるいわゆる『ギャル』だ。見た目は派手だが、こうして何かと気にかけてくれる。"
+        },
+        {
             type: "dialogue",
             character: "soma",
-            text: "ああ……お早う、珠梨。寝たよ、三時間くらい。"
+            text: "ああ……おはよう、珠梨。寝たよ、三時間くらい。"
         },
         {
             type: "dialogue",
@@ -182,27 +186,12 @@ const SCENARIO = {
         {
             type: "dialogue",
             character: "juri",
-            text: "ふっ、どういたしまして！　……あ、そういえば今日の小テスト勉強した？",
-            expression: "smiling"
-        },
-        {
-            type: "dialogue",
-            character: "soma",
-            text: "……忘れてた。"
-        },
-        {
-            type: "dialogue",
-            character: "juri",
-            text: "やっぱね〜！　あたし、ヤマ張ってきたから後で見せてあげる！　感謝しなさいよね〜！",
+            text: "どういたしまして～",
             expression: "smiling"
         },
         {
             type: "narration",
-            text: "高橋珠梨。俺の幼馴染であり、クラスでも一目置かれるいわゆる『ギャル』だ。見た目は派手だが、こうして何かと気にかけてくれる。"
-        },
-        {
-            type: "narration",
-            text: "（モブ男子A）お、高橋さんだ！　やっぱ可愛ええなぁ……"
+            text: "（モブ男子A）お、高橋さんだ！　やっぱ可愛いいなぁ……"
         },
         {
             type: "narration",
@@ -259,6 +248,10 @@ const SCENARIO = {
             expression: "normal" // 困り顔代用
         },
         {
+            type: "narration",
+            text: "こいつは吉本湘爾。真面目でしっかり者のクラス委員長だが、こうして些細なことで悩みすぎるところがある。でも、その実直さが彼女の良さでもある。"
+        },
+        {
             type: "dialogue",
             character: "soma",
             text: "おはよう。で、何をそんなに悩んでるんだ？　また学級委員の仕事か？"
@@ -278,7 +271,7 @@ const SCENARIO = {
         {
             type: "dialogue",
             character: "soma",
-            text: "……は？"
+            text: "……え？"
         },
         {
             type: "dialogue",
@@ -289,7 +282,7 @@ const SCENARIO = {
         {
             type: "dialogue",
             character: "soma",
-            text: "どっちも借りればよくないか？"
+            text: "どっちも借りればいいんじゃないか？"
         },
         {
             type: "dialogue",
@@ -322,10 +315,6 @@ const SCENARIO = {
             character: "shoji",
             text: "ふふ、やっぱり夏海くんは頼りになるわね。相談してよかった。",
             expression: "smiling"
-        },
-        {
-            type: "narration",
-            text: "吉本湘爾。真面目でしっかり者のクラス委員長だが、こうして些細なことで悩みすぎることもあるんだよな。でも、その実直さが彼女の良さでもある。"
         },
         {
             type: "scene",
@@ -378,7 +367,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "谷藤翔希子。一年の後輩で、吹奏楽部に所属している。見ての通り、台風のようなやつだ。"
+            text: "こいつは谷藤翔希子。一年の後輩で、吹奏楽部に所属している。見ての通り、台風のようなやつだ。"
         },
         {
             type: "dialogue",
@@ -394,7 +383,7 @@ const SCENARIO = {
         {
             type: "dialogue",
             character: "shokiko",
-            text: "ちぇーっ！　ケチ！　センパイのケチんぼ！　末代まで語り継いでやる〜！",
+            text: "ちぇーっ！　センパイのケチ！　末代まで語り継いでやる〜！",
             expression: "surprised" // ぷんぷん顔代用（embarresed?）
         },
         {
@@ -454,10 +443,6 @@ const SCENARIO = {
             text: "今日は部活も休みだし、少し早めに帰るか。……ん？"
         },
         {
-            type: "narration",
-            text: "あれは……一年の竹重か。危なっかしいな、あんなに抱えて。"
-        },
-        {
             type: "dialogue",
             character: "souka",
             text: "……（よろよろ）",
@@ -500,6 +485,10 @@ const SCENARIO = {
             character: "souka",
             text: "……！　先輩……。",
             expression: "normal" // 真顔
+        },
+        {
+            type: "narration",
+            text: "こいつは竹重奏花。理系女子で優秀らしいが、この通りかなりの天然だ。白衣が似合っているようで、中身は年相応以上に子供っぽいのかもしれない。"
         },
         {
             type: "dialogue",
@@ -560,10 +549,6 @@ const SCENARIO = {
             expression: "surprised"
         },
         {
-            type: "narration",
-            text: "竹重奏花。理系女子で優秀らしいが、この通りかなりの天然だ。白衣が似合っているようで、中身は年相応以上に子供っぽいのかもしれない。"
-        },
-        {
             type: "scene",
             next: "scene5"
         }
@@ -598,7 +583,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "高杉美由紀先輩。美人でスタイルもいいが、冷徹で近寄りがたいと噂の先輩だ。そんな人がこんなところで……"
+            text: "この人は高杉美由紀先輩。美人でスタイルもいいが、冷徹で近寄りがたいと噂の先輩だ。"
         },
         {
             type: "dialogue",
@@ -720,7 +705,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "颯真（モノローグ）「始まったか……。毎年恒例、血で血を洗う出し物決め会議。」"
+            text: "颯真「始まったか……。毎年恒例、血で血を洗う出し物決め会議。」"
         },
         {
             type: "dialogue",
@@ -766,7 +751,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "颯真「（固いな吉本…これじゃ何も決まらないよ。）」"
+            text: "颯真「（固いな吉本…これじゃ何も決まらないぞ。）」"
         },
         {
             type: "dialogue",
@@ -786,7 +771,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "颯真（モノローグ）「……案の定、まとまらない。珠梨の言う『楽しさ』と、湘爾の言う『合理性』。どっちも極端なんだよな。」"
+            text: "颯真「……案の定、まとまらない。珠梨の言う『楽しさ』と、湘爾の言う『合理性』。どっちも極端なんだよな。」"
         },
         {
             type: "dialogue",
@@ -821,7 +806,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "颯真（モノローグ）「ふぅ……なんとか収まったか。」"
+            text: "颯真「なんとか収まったか……。」"
         },
         {
             type: "dialogue",
@@ -853,7 +838,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "颯真「くっ……（墓穴を掘った……！）」"
+            text: "颯真「くっ……墓穴を掘った……！」"
         },
         {
             type: "scene",
@@ -868,7 +853,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "颯真（モノローグ）「こうして、怒涛の準備期間が始まった。」"
+            text: "颯真「こうして、怒涛の準備期間が始まった。」"
         },
         {
             type: "dialogue",
@@ -894,18 +879,18 @@ const SCENARIO = {
             type: "choice",
             choices: [
                 {
-                    text: "正直さ、どっちでもよくね？",
+                    text: "正直さ、どっちでもよくないか？",
                     next: "scene8_bad_juri"
                 },
                 {
-                    text: "右の方が似合ってるんじゃないか？"
+                    text: "右の方がエモいんじゃないか？"
                 }
             ]
         },
         {
             type: "dialogue",
             character: "soma",
-            text: "右の方が似合ってるんじゃないか？"
+            text: "右の方がエモいんじゃないか？"
         },
         {
             type: "dialogue",
@@ -931,7 +916,7 @@ const SCENARIO = {
         {
             type: "dialogue",
             character: "shoji",
-            text: "……すごっ。夏海くん、頭の中に計算機でも入ってるの？",
+            text: "……すごっ。夏海くん、助かったわ。",
             expression: "surprised"
         },
 
@@ -939,18 +924,18 @@ const SCENARIO = {
             type: "choice",
             choices: [
                 {
-                    text: "まあまあまあ、俺にかかればこんなもんっしょ",
+                    text: "まあまあ、俺にかかればこんなもんっしょ。",
                     next: "scene8_bad_shoji"
                 },
                 {
-                    text: "普通だよ。"
+                    text: "どういたしまして。"
                 }
             ]
         },
         {
             type: "dialogue",
             character: "soma",
-            text: "普通だよ。"
+            text: "どういたしまして。"
         },
         {
             type: "background",
@@ -982,10 +967,10 @@ const SCENARIO = {
             type: "choice",
             choices: [
                 {
-                    text: "気持ちはありがたいけど程々にな。"
+                    text: "無理せず、程々にな。"
                 },
                 {
-                    text: "やっぱこいつが気違いだろww",
+                    text: "お前空回りしてないか。",
                     next: "scene8_bad_shokiko"
                 }
             ]
@@ -993,7 +978,7 @@ const SCENARIO = {
         {
             type: "dialogue",
             character: "soma",
-            text: "気持ちはありがたいけど程々にな。"
+            text: "無理せず、程々にな。"
         },
         {
             type: "background",
@@ -1002,18 +987,18 @@ const SCENARIO = {
         {
             type: "dialogue",
             character: "souka",
-            text: "先輩。コーヒーの旨味成分を極限まで抽出するための、遠心分離機です。",
+            text: "先輩。りんごの旨味成分を極限まで抽出するための、遠心分離機です。",
             expression: "normal"
         },
         {
             type: "dialogue",
             character: "soma",
-            text: "喫茶店にそんなもん持ち込むな。普通のドリップでいいんだよ。"
+            text: "ジュース屋にそんなもん持ち込むな。普通の搾り機でいいんだよ。"
         },
         {
             type: "dialogue",
             character: "souka",
-            text: "ですが、ペーパードリップでは紙の繊維の味が……",
+            text: "ですが、搾り機では金属の味が……",
             expression: "normal"
         },
 
@@ -1021,7 +1006,7 @@ const SCENARIO = {
             type: "choice",
             choices: [
                 {
-                    text: "はいバカーwww　てことだけは伝えておきますね。",
+                    text: "お前、細かいと嫌われるぞ。",
                     next: "scene8_bad_souka"
                 },
                 {
@@ -1035,10 +1020,21 @@ const SCENARIO = {
             text: "誰も気にしないから心配いらないよ。"
         },
         {
+            type: "dialogue",
+            character: "souka",
+            text: "わ、わかりました。",
+            expression: "normal"
+        },
+        {
             type: "background",
             bg: "stairs"
         },
-
+        {
+            type: "dialogue",
+            character: "miyuki",
+            text: "……よし、……勝てそう",
+            expression: "normal"
+        },
         {
             type: "choice",
             choices: [
@@ -1046,7 +1042,7 @@ const SCENARIO = {
                     text: "……あれ？　高杉先輩、またサボりですか？"
                 },
                 {
-                    text: "どしたん話きこか？",
+                    text: "ゲームしてないで勉強したらどうですか？",
                     next: "scene8_bad_miyuki"
                 }
             ]
@@ -1158,7 +1154,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "颯真（モノローグ）「調子のいいやつだ。……だが、こいつの笑顔を見ると、疲れも少し飛ぶ気がする。」"
+            text: "颯真「調子のいいやつだ。……だが、こいつの笑顔を見ると、疲れも少し飛ぶ気がする。」"
         },
         {
             type: "scene",
@@ -1211,7 +1207,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "颯真（モノローグ）「オーバーだな。……でも、少しでも負担を減らしてやりたいと思う。」"
+            text: "颯真「オーバーだな。……でも、少しでも負担を減らしてやりたいと思う。」"
         },
         {
             type: "scene",
@@ -1259,7 +1255,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "颯真（モノローグ）「こいつといると、退屈する暇がないな。……まあ、悪くないか。」"
+            text: "颯真「こいつといると、退屈する暇がないな。……まあ、悪くないか。」"
         },
         {
             type: "scene",
@@ -1280,7 +1276,7 @@ const SCENARIO = {
         {
             type: "dialogue",
             character: "souka",
-            text: "……おかしいですね。コーヒーゼリーが完成するはずが、黒い煙がでてくるんです。",
+            text: "……おかしいですね。りんごあめが完成するはずが、黒い煙がでてくるんです。",
             expression: "normal" // 困り顔
         },
         {
@@ -1302,12 +1298,12 @@ const SCENARIO = {
         {
             type: "dialogue",
             character: "souka",
-            text: "はい……！先輩はコーヒーゼリーが好きだと聞いたので、本番でサプライズを……あ、言ってしまいました……",
+            text: "はい……！先輩はりんごあめが好きだと聞いたので、本番でサプライズを……あ、言ってしまいました……",
             expression: "embarresed"
         },
         {
             type: "narration",
-            text: "颯真（モノローグ）「放っておけない危うさがある。……それが、奏花の魅力なのかもしれない。」"
+            text: "颯真「放っておけない危うさがある。……それが、奏花の魅力なのかもしれない。」"
         },
         {
             type: "scene",
@@ -1359,7 +1355,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "颯真（モノローグ）「夕日に照らされた横顔が、妙に綺麗で。俺は目を逸らせなかった。」"
+            text: "颯真「夕日に照らされた横顔が、妙に綺麗で。俺は目を逸らせなかった。」"
         },
         {
             type: "scene",
@@ -1461,7 +1457,7 @@ const SCENARIO = {
         {
             type: "dialogue",
             character: "soma",
-            text: "事・実・だ。"
+            text: "事実を言っただけだ。"
         },
         {
             type: "dialogue",
@@ -1502,7 +1498,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "颯真（モノローグ）「……すごい人気だ。看板娘ってレベルじゃないな。」"
+            text: "颯真「……すごい人気だ。看板娘ってレベルじゃないな。」"
         },
         {
             type: "dialogue",
@@ -2001,7 +1997,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "颯真（モノローグ）「あれは……谷藤か？　普段のおちゃらけた様子とは別人のように真剣な顔だ。」"
+            text: "颯真「あれは……谷藤か？　普段のおちゃらけた様子とは別人のように真剣な顔だ。」"
         },
         {
             type: "dialogue",
@@ -2106,7 +2102,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "颯真（モノローグ）「始まったな。」"
+            text: "颯真「始まったな。」"
         },
         {
             type: "dialogue",
@@ -2143,7 +2139,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "颯真（モノローグ）「心臓が、変な跳ね方をした気がした。」"
+            text: "颯真「心臓が、変な跳ね方をした気がした。」"
         },
         {
             type: "scene",
@@ -2337,7 +2333,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "奏花（モノローグ）「（おかしいです。先輩がいなくなると、少し寂しい……これも、風邪の症状でしょうか？）」"
+            text: "奏花「（おかしいです。先輩がいなくなると、少し寂しい……これも、風邪の症状でしょうか？）」"
         },
         {
             type: "scene",
@@ -2370,16 +2366,11 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "（颯真、他の女子と話している）"
+            text: "（颯真、メニュー表を見ている）"
         },
         {
             type: "narration",
-            text: "女子生徒「夏海くーん、ここ手伝ってー！」"
-        },
-        {
-            type: "dialogue",
-            character: "soma",
-            text: "おう、今行く。"
+            text: "颯真「（俺はリンゴジュースを頼もうかな……）」"
         },
         {
             type: "dialogue",
@@ -2389,7 +2380,7 @@ const SCENARIO = {
         },
         {
             type: "narration",
-            text: "奏花（モノローグ）「（胸が……モヤモヤします。実験が成功しているのに、ちっとも嬉しくありません。）」"
+            text: "奏花（モノローグ）「（胸が……ドキドキします。実験が成功してもここまで心拍数が上がることはなかったのに……）」"
         },
         {
             type: "narration",
@@ -2945,7 +2936,7 @@ const SCENARIO = {
         {
             type: "dialogue",
             character: "juri",
-            text: "え、おまえさあ、ほんとそれでいいの？まじで",
+            text: "え、おまえさあ、ほんとセンスないわ、まじで。",
             expression: "surprised"
         },
         {
@@ -2958,7 +2949,7 @@ const SCENARIO = {
         {
             type: "dialogue",
             character: "shoji",
-            text: "え、そんなこと言うの？ちょっといま、傷ついたんだけど",
+            text: "え、なんかイキッてて気持ち悪い……そんな人だとは思わなかったわ。",
             expression: "surprised"
         },
         {
@@ -2971,7 +2962,7 @@ const SCENARIO = {
         {
             type: "dialogue",
             character: "shokiko",
-            text: "えーー、それはちょっとやばいかなw",
+            text: "センパイそんなこと言う人だったんですね、失望しました。",
             expression: "surprised"
         },
         {
@@ -2984,7 +2975,7 @@ const SCENARIO = {
         {
             type: "dialogue",
             character: "souka",
-            text: "あー、先輩も、そういうこという人だったんですね。",
+            text: "え……先輩、そんなひどいこと言うんですね。",
             expression: "surprised"
         },
         {
@@ -3009,7 +3000,7 @@ const SCENARIO = {
     scene_gameover_common: [
         {
             type: "narration",
-            text: "俺はその一言で、高校生活のすべてを失った。やっぱり俺はいつまでも彼女なんてできないのかな。大切なコミュニケーションって、なぁんなんですかねぇ⤴"
+            text: "俺はその一言で、高校生活のすべてを失った。やっぱり俺にはいつまでも彼女なんてできないんだ。大切なコミュニケーションって、なぁんなんですかねぇ⤴"
         },
         {
             type: "scene",
